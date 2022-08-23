@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Text from '../components/Text.astro'
+
+const astro = '<strong>Astro build</strong>'
+---
+
+<Layout title="Welcome to Astro.">
+  <div class:list={['red', { blue: true }]}>Docs</div>
+  <h1>Hi <span set:html={astro} /></h1>
+  <Text>Hello at bottom</Text>
+</Layout>
+
+<style>
+  .red {
+    color: red;
+  }
+
+  .blue {
+    color: blue;
+  }
+</style>
